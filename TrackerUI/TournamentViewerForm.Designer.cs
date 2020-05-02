@@ -165,18 +165,19 @@
             this.teamTwoName.AutoSize = true;
             this.teamTwoName.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teamTwoName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.teamTwoName.Location = new System.Drawing.Point(386, 309);
+            this.teamTwoName.Location = new System.Drawing.Point(386, 307);
             this.teamTwoName.Name = "teamTwoName";
             this.teamTwoName.Size = new System.Drawing.Size(165, 37);
             this.teamTwoName.TabIndex = 9;
             this.teamTwoName.Text = "<team two>";
+            this.teamTwoName.Click += new System.EventHandler(this.teamTwoName_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(467, 272);
+            this.label1.Location = new System.Drawing.Point(467, 264);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 37);
             this.label1.TabIndex = 12;
@@ -191,7 +192,7 @@
             this.scoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scoreButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.scoreButton.Location = new System.Drawing.Point(587, 272);
+            this.scoreButton.Location = new System.Drawing.Point(587, 264);
             this.scoreButton.Name = "scoreButton";
             this.scoreButton.Size = new System.Drawing.Size(102, 37);
             this.scoreButton.TabIndex = 13;

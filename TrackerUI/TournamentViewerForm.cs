@@ -41,5 +41,10 @@ namespace TrackerUI
         {
 
         }
+
+        private void teamTwoName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
