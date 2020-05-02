@@ -135,7 +135,7 @@
             this.orLabel.AutoSize = true;
             this.orLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.orLabel.Location = new System.Drawing.Point(208, 270);
+            this.orLabel.Location = new System.Drawing.Point(245, 270);
             this.orLabel.Name = "orLabel";
             this.orLabel.Size = new System.Drawing.Size(64, 37);
             this.orLabel.TabIndex = 21;
