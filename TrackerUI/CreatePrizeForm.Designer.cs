@@ -36,7 +36,7 @@
             this.placeNameLabel = new System.Windows.Forms.Label();
             this.prizeAmountValue = new System.Windows.Forms.TextBox();
             this.priceAmountLabel = new System.Windows.Forms.Label();
-            this.pricePercentageValue = new System.Windows.Forms.TextBox();
+            this.prizePercentageValue = new System.Windows.Forms.TextBox();
             this.pricePercentageLabel = new System.Windows.Forms.Label();
             this.orLabel = new System.Windows.Forms.Label();
             this.createPrizeButton = new System.Windows.Forms.Button();
@@ -111,13 +111,13 @@
             this.priceAmountLabel.TabIndex = 17;
             this.priceAmountLabel.Text = "Prize amount";
             // 
-            // pricePercentageValue
+            // prizePercentageValue
             // 
-            this.pricePercentageValue.ForeColor = System.Drawing.Color.Black;
-            this.pricePercentageValue.Location = new System.Drawing.Point(247, 327);
-            this.pricePercentageValue.Name = "pricePercentageValue";
-            this.pricePercentageValue.Size = new System.Drawing.Size(207, 35);
-            this.pricePercentageValue.TabIndex = 20;
+            this.prizePercentageValue.ForeColor = System.Drawing.Color.Black;
+            this.prizePercentageValue.Location = new System.Drawing.Point(247, 327);
+            this.prizePercentageValue.Name = "prizePercentageValue";
+            this.prizePercentageValue.Size = new System.Drawing.Size(207, 35);
+            this.prizePercentageValue.TabIndex = 20;
             // 
             // pricePercentageLabel
             // 
@@ -165,7 +165,7 @@
             this.ClientSize = new System.Drawing.Size(554, 518);
             this.Controls.Add(this.createPrizeButton);
             this.Controls.Add(this.orLabel);
-            this.Controls.Add(this.pricePercentageValue);
+            this.Controls.Add(this.prizePercentageValue);
             this.Controls.Add(this.pricePercentageLabel);
             this.Controls.Add(this.prizeAmountValue);
             this.Controls.Add(this.priceAmountLabel);
@@ -194,7 +194,7 @@
         private System.Windows.Forms.Label placeNameLabel;
         private System.Windows.Forms.TextBox prizeAmountValue;
         private System.Windows.Forms.Label priceAmountLabel;
-        private System.Windows.Forms.TextBox pricePercentageValue;
+        private System.Windows.Forms.TextBox prizePercentageValue;
         private System.Windows.Forms.Label pricePercentageLabel;
         private System.Windows.Forms.Label orLabel;
         private System.Windows.Forms.Button createPrizeButton;
