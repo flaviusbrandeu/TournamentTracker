@@ -8,7 +8,7 @@ namespace TrackerLibrary
 {
     public static class GlobalConfig
     {
-        internal static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
 
         public static void InitializeConnections(bool database, bool textFiles)
         {
