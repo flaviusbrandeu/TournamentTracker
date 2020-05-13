@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TournamentLibrary.Models
+namespace TrackerLibrary.Models
 {
     internal class TournamentModel
     {
