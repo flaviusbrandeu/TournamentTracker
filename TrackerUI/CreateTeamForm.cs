@@ -144,5 +144,9 @@ namespace TrackerUI
 
             WireUpList();
         }
+
+        private void removeSelectedPlayerButton_Click_1(object sender, EventArgs e)
+        {
+        }
     }
 }
