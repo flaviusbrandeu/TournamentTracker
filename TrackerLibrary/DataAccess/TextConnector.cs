@@ -12,6 +12,11 @@ namespace TrackerLibrary.DataAccess
     {
         private const string PrizesFile = "PrizeModels.csv";
 
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            return model;
+        }
+
         // TODO - Wire up the CreatePrize for text files
         /// <summary>
         /// Save a new prize to a text file.
