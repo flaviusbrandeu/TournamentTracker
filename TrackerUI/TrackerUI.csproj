@@ -144,7 +144,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TournamentLibrary\TrackerLibrary.csproj">
+    <ProjectReference Include="..\TrackerLibrary\TrackerLibrary.csproj">
       <Project>{bbd62246-c207-45a1-b637-d5b865384961}</Project>
       <Name>TrackerLibrary</Name>
     </ProjectReference>
