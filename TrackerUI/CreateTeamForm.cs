@@ -94,8 +94,12 @@ namespace TrackerUI
 
                 foreach (IDataConnection connection in GlobalConfig.Connections)
                 {
-                    connection.CreatePerson(p);
+                    p = connection.CreatePerson(p);
                 }
+
+                selectedTeamMembers.Add(p);
+
+                WireUpList();
 
                 firstNameValue.Text = "";
                 lastNameValue.Text = "";
@@ -110,6 +114,17 @@ namespace TrackerUI
 
         private void createTournamentButton_Click(object sender, EventArgs e)
         {
+            TeamModel t = new TeamModel();
+
+            t.TeamName = teamNameValue.Text;
+            t.TeamMembers = selectedTeamMembers;
+
+            foreach (IDataConnection connection in GlobalConfig.Connections)
+            {
+                connection.CreateTeam(t);
+            }
+
+            // TODO - If we aren't closing this form after creation, reset the form
         }
 
         private bool ValidateForm()
@@ -139,14 +154,26 @@ namespace TrackerUI
         {
             PersonModel p = (PersonModel)selectTeamMemberDropDown.SelectedItem;
 
-            availableTeamMembers.Remove(p);
-            selectedTeamMembers.Add(p);
+            if (p != null)
+            {
+                availableTeamMembers.Remove(p);
+                selectedTeamMembers.Add(p);
 
-            WireUpList();
+                WireUpList();
+            }
         }
 
         private void removeSelectedPlayerButton_Click_1(object sender, EventArgs e)
         {
+            PersonModel p = (PersonModel)teamMembersListBox.SelectedItem;
+
+            if (p != null)
+            {
+                selectedTeamMembers.Remove(p);
+                availableTeamMembers.Add(p);
+
+                WireUpList();
+            }
         }
     }
 }
