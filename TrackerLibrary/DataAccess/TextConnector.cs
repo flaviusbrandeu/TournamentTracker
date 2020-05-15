@@ -11,13 +11,19 @@ namespace TrackerLibrary.DataAccess
     public class TextConnector : IDataConnection
     {
         private const string PrizesFile = "PrizeModels.csv";
+        private const string PeopleFile = "PersonModels.csv";
 
         public PersonModel CreatePerson(PersonModel model)
         {
+            List<PersonModel> people = PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
+
+            people.Add(model);
+
+            people.SaveToPeopleFile(PeopleFile);
+
             return model;
         }
 
-        // TODO - Wire up the CreatePrize for text files
         /// <summary>
         /// Save a new prize to a text file.
         /// </summary>
