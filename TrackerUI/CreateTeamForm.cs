@@ -24,7 +24,7 @@ namespace TrackerUI
 
             //CreateSampleData();
 
-            WireUpList();
+            WireUpLists();
         }
 
         private void CreateSampleData()
@@ -36,7 +36,7 @@ namespace TrackerUI
             selectedTeamMembers.Add(new PersonModel { FirstName = "Jane", LastName = "Wild" });
         }
 
-        private void WireUpList()
+        private void WireUpLists()
         {
             selectTeamMemberDropDown.DataSource = null;
 
@@ -99,7 +99,7 @@ namespace TrackerUI
 
                 selectedTeamMembers.Add(p);
 
-                WireUpList();
+                WireUpLists();
 
                 firstNameValue.Text = "";
                 lastNameValue.Text = "";
@@ -159,7 +159,7 @@ namespace TrackerUI
                 availableTeamMembers.Remove(p);
                 selectedTeamMembers.Add(p);
 
-                WireUpList();
+                WireUpLists();
             }
         }
 
@@ -172,7 +172,7 @@ namespace TrackerUI
                 selectedTeamMembers.Remove(p);
                 availableTeamMembers.Add(p);
 
-                WireUpList();
+                WireUpLists();
             }
         }
     }
