@@ -15,17 +15,28 @@ namespace TrackerUI
     public partial class CreateTournamentForm : Form
     {
         private List<TeamModel> availableTeams = GlobalConfig.Connections.First().GetTeam_All();
+        private List<TeamModel> selectedTeams = new List<TeamModel>();
+        private List<PrizeModel> selectetPrizes = new List<PrizeModel>();
 
         public CreateTournamentForm()
         {
             InitializeComponent();
-            InitializeLists();
+            WireUpLists();
         }
 
-        private void InitializeLists()
+        private void WireUpLists()
         {
+            selectTeamDropDown.DataSource = null;
             selectTeamDropDown.DataSource = availableTeams;
             selectTeamDropDown.DisplayMember = "TeamName";
+
+            tournamentTeamsListBox.DataSource = null;
+            tournamentTeamsListBox.DataSource = selectedTeams;
+            tournamentTeamsListBox.DisplayMember = "TeamName";
+
+            prizesListBox.DataSource = null;
+            prizesListBox.DataSource = selectetPrizes;
+            prizesListBox.DisplayMember = "PlaceName";
         }
 
         private void CreateTournamentForm_Load(object sender, EventArgs e)
@@ -44,8 +55,27 @@ namespace TrackerUI
         {
         }
 
-        private void scoreButton_Click(object sender, EventArgs e)
+        private void addTeamButton_Click(object sender, EventArgs e)
         {
+            /*PersonModel p = (PersonModel)selectTeamMemberDropDown.SelectedItem;
+
+            if (p != null)
+            {
+                availableTeamMembers.Remove(p);
+                selectedTeamMembers.Add(p);
+
+                WireUpLists();
+            }*/
+
+            TeamModel t = (TeamModel)selectTeamDropDown.SelectedItem;
+
+            if (t != null)
+            {
+                availableTeams.Remove(t);
+                selectedTeams.Add(t);
+
+                WireUpLists();
+            }
         }
 
         private void selectTeamLabel_Click(object sender, EventArgs e)
@@ -61,6 +91,10 @@ namespace TrackerUI
         }
 
         private void createTournamentButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tournamentTeamsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
     }
