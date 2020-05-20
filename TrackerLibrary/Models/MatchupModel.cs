@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary.Models
 {
-    internal class MatchupModel
+    public class MatchupModel
     {
         public List<MatchupEntryModel> Entries { get; set; } = new List<MatchupEntryModel>();
         public TeamModel Winner { get; set; }
