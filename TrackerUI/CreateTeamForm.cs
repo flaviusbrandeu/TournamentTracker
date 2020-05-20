@@ -17,10 +17,13 @@ namespace TrackerUI
     {
         private List<PersonModel> availableTeamMembers = GlobalConfig.Connections.ElementAt(0).GetPerson_All();
         private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
+        private ITeamRequester callingForm;
 
-        public CreateTeamForm()
+        public CreateTeamForm(ITeamRequester caller)
         {
             InitializeComponent();
+
+            callingForm = caller;
 
             //CreateSampleData();
 
@@ -112,7 +115,7 @@ namespace TrackerUI
             }
         }
 
-        private void createTournamentButton_Click(object sender, EventArgs e)
+        private void createTeamButton_Click(object sender, EventArgs e)
         {
             TeamModel t = new TeamModel();
 
@@ -121,10 +124,12 @@ namespace TrackerUI
 
             foreach (IDataConnection connection in GlobalConfig.Connections)
             {
-                connection.CreateTeam(t);
+                t = connection.CreateTeam(t);
             }
 
-            // TODO - If we aren't closing this form after creation, reset the form
+            callingForm.TeamComplete(t);
+
+            this.Close();
         }
 
         private bool ValidateForm()
