@@ -106,7 +106,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             //Rounds = 5
             // id,TournamentName,EntryFee,(id|id|id - Entered Teams),(id|id|id - Prizes),(Rounds - id^id^id|id^id^id|id^id^id)
             List<TournamentModel> output = new List<TournamentModel>();
-            List<TeamModel> teams = teamFileName.FullFilePath().LoadFile().ConvertToTeamModels();
+            List<TeamModel> teams = teamFileName.FullFilePath().LoadFile().ConvertToTeamModels(peopleFileName);
             List<PrizeModel> prizes = prizeFileName.FullFilePath().LoadFile().ConvertToPrizeModels();
 
             foreach (string line in lines)
@@ -134,6 +134,8 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
                 // TODO - Capture Rounds information
             }
+
+            return output;
         }
 
         public static void SaveToPrizeFile(this List<PrizeModel> models, string fileName)

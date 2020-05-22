@@ -9,6 +9,11 @@ namespace TrackerLibrary.Models
     public class MatchupEntryModel
     {
         /// <summary>
+        /// The unique identifier for the matchup.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Represents one team in the matchup
         /// </summary>
         public TeamModel TeamCompeting { get; set; }
@@ -23,12 +28,5 @@ namespace TrackerLibrary.Models
         /// as the winner
         /// </summary>
         public MatchupModel ParentMatchup { get; set; }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="initialScore"></param>
-        public MatchupEntryModel(double initialScore)
-        {
-        }
     }
 }

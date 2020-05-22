@@ -7,8 +7,8 @@
     <ProjectGuid>{BBD62246-C207-45A1-B637-D5B865384961}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TournamentLibrary</RootNamespace>
-    <AssemblyName>TournamentLibrary</AssemblyName>
+    <RootNamespace>TrackerLibrary</RootNamespace>
+    <AssemblyName>TrackerLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -50,13 +50,14 @@
     <Compile Include="DataAccess\IDataConnection.cs" />
     <Compile Include="DataAccess\SqlConnector.cs" />
     <Compile Include="DataAccess\TextConnector.cs" />
-    <Compile Include="Models\TournamentModel.cs" />
     <Compile Include="Models\MatchupEntryModel.cs" />
     <Compile Include="Models\MatchupModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\PrizeModel.cs" />
+    <Compile Include="Models\TournamentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\TeamModel.cs" />
+    <Compile Include="TournamentLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

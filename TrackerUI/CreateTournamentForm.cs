@@ -109,14 +109,13 @@ namespace TrackerUI
             tm.EnteredTeams = selectedTeams;
 
             // TODO - Wire matchups
+            TournamentLogic.CreateRounds(tm);
 
             // Create Tournament entry
             // Create all of the prizes entries
             // Create all of the team entries
-            foreach (IDataConnection connection in GlobalConfig.Connections)
-            {
-                connection.CreateTournament(tm);
-            }
+
+            GlobalConfig.Connections.First().CreateTournament(tm);
         }
 
         private void tournamentTeamsListBox_SelectedIndexChanged(object sender, EventArgs e)
