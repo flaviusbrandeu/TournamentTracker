@@ -115,7 +115,10 @@ namespace TrackerUI
             // Create all of the prizes entries
             // Create all of the team entries
 
-            GlobalConfig.Connections.First().CreateTournament(tm);
+            foreach (IDataConnection connection in GlobalConfig.Connections)
+            {
+                connection.CreateTournament(tm);
+            }
         }
 
         private void tournamentTeamsListBox_SelectedIndexChanged(object sender, EventArgs e)
